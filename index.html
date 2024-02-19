@@ -14,7 +14,7 @@
     <div id="app">
 
         <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" @mouseenter="autoPlayStop()" @mouseleave="autoPlayStart">
 
                 <div class="item" v-for="(game, index) in slides" v-show="index == activeSlider">
                     

@@ -30,6 +30,8 @@ createApp({
             ],
 
         activeSlider: 0,
+
+        interval: null,
         }
 	},
 
@@ -53,12 +55,19 @@ createApp({
         showSlide(index){
             this.activeSlider = index;
         },
-    
-        
+
+        autoPlayStart(){
+            this.interval = setInterval(this.nextSlide, 3000)
+        },
+
+        autoPlayStop(){
+            clearInterval(this.interval)
+        }
+
     },
 
     mounted(){
-        setInterval(this.nextSlide, 3000)
+        this.autoPlayStart();
     }
 
 
