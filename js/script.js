@@ -49,6 +49,10 @@ createApp({
             } else{
                 this.activeSlider--;
             }
+        },
+
+        showSlide(index){
+            this.activeSlider = index;
         }
     }
 }).mount('#app');
