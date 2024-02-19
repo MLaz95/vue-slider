@@ -35,6 +35,20 @@ createApp({
 	},
 
     methods:{
+        nextSlide(){
+            if(this.activeSlider >= this.slides.length - 1){
+                this.activeSlider = 0;
+            } else{
+                this.activeSlider++;
+            }
+        },
 
+        prevSlide(){
+            if(this.activeSlider <= 0){
+                this.activeSlider = this.slides.length - 1
+            } else{
+                this.activeSlider--;
+            }
+        }
     }
 }).mount('#app');
