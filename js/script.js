@@ -5,7 +5,6 @@ createApp({
         
 		return{
 
-            
 			slides: [
         {
             image: 'img/01.webp',
@@ -53,6 +52,14 @@ createApp({
 
         showSlide(index){
             this.activeSlider = index;
-        }
+        },
+    
+        
+    },
+
+    mounted(){
+        setInterval(this.nextSlide, 3000)
     }
+
+
 }).mount('#app');
